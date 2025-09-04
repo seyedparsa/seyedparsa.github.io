@@ -1,34 +1,41 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"abebe":
+  - firstname: ["Rediet", "R."]
+    url: https://www.redietabebe.com/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"alomar":
+  - firstname: ["Abdullah", "A."]
+    url: https://aalomar.me/
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"belkin":
+  - firstname: ["Misha", "M."]
+    url: http://misha.belkin-wang.org/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"boix-adsera":
+  - firstname: ["Enric", "E."]
+    url: https://eboix.github.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"edelman":
+  - firstname: ["Ezra", "E."]
+    url: https://www.ezraedelman.com/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"jelassi":
+  - firstname: ["Samy", "S."]
+    url: https://sjelassi.github.io/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"malach":
+  - firstname: ["Eran", "E."]
+    url: https://www.eranmalach.com/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"nasr-esfahany":
+  - firstname: ["Arash", "A."]
+    url: https://www.csail.mit.edu/person/arash-nasr-esfahany
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"procaccia":
+  - firstname: ["Ariel", "A."]
+    url: https://procaccia.info/
+
+
+"shirali":
+  - firstname: ["Ali", "A."]
+    url: https://sites.google.com/berkeley.edu/ali/home
+
