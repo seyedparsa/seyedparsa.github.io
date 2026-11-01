@@ -16,7 +16,6 @@
   --accent-ink: #fffdf8;
   --shadow: rgba(60, 40, 20, 0.12);
   --tape: rgba(242, 181, 58, 0.55);
-  --highlight: rgba(242, 181, 58, 0.45);
 
   --sun-bg: #fbe5ad;  --sun-fg: #6e4a00;  --sun: #f2b53a;
   --clay-bg: #f8d2c3; --clay-fg: #8a3219; --clay: #d9603b;
@@ -36,7 +35,6 @@
   --accent-ink: #1b1612;
   --shadow: rgba(0, 0, 0, 0.45);
   --tape: rgba(242, 181, 58, 0.35);
-  --highlight: rgba(242, 181, 58, 0.28);
 
   --sun-bg: #45360f;  --sun-fg: #f6d27c;  --sun: #e9ac36;
   --clay-bg: #4b2a1e; --clay-fg: #f5b29a; --clay: #e9805d;
@@ -212,7 +210,7 @@ main { padding-bottom: 40px; min-height: 70vh; }
 .socials { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; margin: 24px 0 0; padding: 0; }
 
 .polaroid {
-  position: relative; margin: 0; padding: 12px 12px 50px;
+  position: relative; margin: 0; padding: 12px 12px 40px;
   background: var(--paper); border: 1px solid var(--line); border-radius: 6px;
   box-shadow: 0 14px 30px -12px var(--shadow), 0 2px 6px var(--shadow);
   transform: rotate(2.5deg);
@@ -284,7 +282,7 @@ main { padding-bottom: 40px; min-height: 70vh; }
 .paper-title a { color: var(--ink); text-decoration: none; }
 .paper-title a:hover { color: var(--accent); text-decoration: underline wavy; text-decoration-thickness: 1.5px; }
 .authors { margin: 0 0 10px; color: var(--ink-2); font-size: 0.95rem; }
-.authors .me { color: var(--ink); font-weight: 700; background: linear-gradient(transparent 58%, var(--highlight) 58%); }
+.authors .me { color: var(--ink); font-weight: 700; }
 .tldr { margin: 0 0 12px; font-size: 0.98rem; }
 .tldr .hand { color: var(--accent); font-size: 1.3rem; margin-right: 4px; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
