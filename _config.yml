@@ -69,7 +69,7 @@ defaults:
   - scope: { path: "" }
     values:
       layout: page
-      image: /assets/img/prof_pic.jpg # default link-preview image
+      image: /assets/img/profile.jpg # default link-preview image
 
 sass:
   style: compressed

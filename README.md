@@ -25,7 +25,7 @@ Most content is plain YAML or Markdown, so you rarely need to touch the layouts.
 | What the koala says | `_data/koala.yml` |
 | Navigation tabs | `nav:` in `_config.yml` |
 | Colors, fonts, spacing | tokens at the top of `assets/css/main.scss` |
-| Photo / CV | `assets/img/prof_pic.jpg`, `assets/pdf/CV.pdf` |
+| Photo / CV | `assets/img/profile.jpg`, `assets/pdf/CV.pdf` |
 
 ### Adding a paper
 
