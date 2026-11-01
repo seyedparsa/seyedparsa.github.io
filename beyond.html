@@ -1,0 +1,40 @@
+---
+title: Beyond research
+permalink: /beyond/
+kicker: the rest of me
+lede: >-
+  A small scrapbook of things I care about when I'm not staring at loss curves.
+---
+{%- comment -%} Cards come from _data/beyond.yml; photos (optional) from _data/photos.yml. {%- endcomment -%}
+<div class="scrapbook">
+  {%- for c in site.data.beyond %}
+  <article class="scrap scrap-{{ c.color | default: 'sun' }}">
+    {%- if c.image %}<img class="scrap-img" src="{{ c.image | relative_url }}" alt="{{ c.title }}" loading="lazy">{% endif %}
+    <h2 class="scrap-title"><span class="scrap-emoji" aria-hidden="true">{{ c.emoji }}</span> {{ c.title }}</h2>
+    <div class="scrap-text">{{ c.text | markdownify }}</div>
+    {%- if c.link %}<a class="more hand" href="{{ c.link | relative_url }}">more →</a>{% endif %}
+  </article>
+  {%- endfor %}
+</div>
+
+{%- if site.data.photos and site.data.photos.size > 0 %}
+<section class="section">
+  <h2 class="section-title">Snapshots</h2>
+  <div class="photo-strip">
+    {%- for ph in site.data.photos %}
+    <figure class="polaroid polaroid-sm">
+      <img src="{{ ph.src | relative_url }}" alt="{{ ph.caption }}" loading="lazy">
+      <figcaption class="hand">{{ ph.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+<section class="section say-hi card">
+  <h2 class="card-title"><span class="hand">say hi</span></h2>
+  <p>
+    I'm always happy to chat about research, grad school, or the best eucalyptus in town.
+    The easiest way to reach me is <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+  </p>
+</section>

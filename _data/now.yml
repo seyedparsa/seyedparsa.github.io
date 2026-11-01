@@ -1,0 +1,16 @@
+# The "lately" card on the home page. Edit freely; delete a line to hide it.
+# TODO(parsa): replace these placeholders with what you're actually up to.
+updated: "Nov 2026"
+items:
+  - emoji: "🔬"
+    label: thinking about
+    text: how language models represent and carry out multi-step reasoning
+  - emoji: "📖"
+    label: reading
+    text: "[a book you're reading]"
+  - emoji: "🎧"
+    label: listening to
+    text: "[an album or podcast]"
+  - emoji: "📍"
+    label: based in
+    text: San Diego, California

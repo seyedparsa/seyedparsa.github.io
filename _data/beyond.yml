@@ -1,0 +1,29 @@
+# Cards on the /beyond page, a scrapbook of non-research things.
+# TODO(parsa): replace these placeholders with your own.
+#
+# Fields: emoji, title, text (Markdown ok), color (sun | clay | leaf | sky | plum),
+#         image (optional, path under /assets/img/), link (optional)
+- emoji: "📚"
+  title: Bookshelf
+  color: sun
+  text: "[A few books you loved, and one line on why.]"
+- emoji: "🗺️"
+  title: Places
+  color: leaf
+  text: "[Places you've lived, hiked, or want to go back to.]"
+- emoji: "🎶"
+  title: On repeat
+  color: plum
+  text: "[Music, podcasts, whatever keeps you company while you work.]"
+- emoji: "🛠️"
+  title: Things I make
+  color: clay
+  text: "[Side projects, games, tools, recipes…]"
+- emoji: "☕"
+  title: Small joys
+  color: sky
+  text: "[Coffee order, favorite trail, the best taco in San Diego…]"
+- emoji: "🐨"
+  title: Why a koala?
+  color: leaf
+  text: "[Tell the story behind the koala, or just admit it's a cute emoji.]"

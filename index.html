@@ -1,0 +1,86 @@
+---
+layout: default
+body_class: home
+title: Parsa Mirtaheri
+---
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker hand">hi there, welcome in!</p>
+    <h1 class="hero-title">I'm <span class="scribble">Parsa</span>.</h1>
+    <p class="lede">
+      I'm a PhD student in Computer Science at UC San Diego, advised by
+      <a href="https://misha.belkin-wang.org/">Misha Belkin</a>.
+    </p>
+    <p>
+      I study the scientific and theoretical foundations of machine learning. Lately that means
+      trying to understand the <em>representations</em> and <em>computations</em> inside language
+      models: how they reason, what they can and can't do, and why. Before UCSD, I studied
+      Computer Engineering at Sharif University of Technology.
+    </p>
+    <ul class="socials">
+      {%- for s in site.data.socials %}
+      <li><a class="pill pill-icon" href="{{ s.url | relative_url }}">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+
+  <figure class="polaroid">
+    <span class="tape" aria-hidden="true"></span>
+    <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Parsa, smiling, in a yellow t-shirt under a canopy of trees at golden hour" width="685" height="685">
+    <figcaption class="hand">that's me!</figcaption>
+    <svg class="doodle doodle-leaf" viewBox="0 0 80 80" aria-hidden="true"><path d="M12 68C14 34 34 14 70 10c-3 34-24 56-58 58Z"/><path d="M12 68 46 34M30 50l-8-10M40 40l-4-12M30 50l12 2M40 40l12 1"/></svg>
+  </figure>
+</section>
+
+<section class="duo">
+  <div class="card card-now">
+    <h2 class="card-title"><span class="hand">lately</span></h2>
+    <ul class="now-list">
+      {%- for item in site.data.now.items %}
+      <li><span class="now-emoji" aria-hidden="true">{{ item.emoji }}</span><span><span class="now-label">{{ item.label }}</span> {{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+      {%- endfor %}
+    </ul>
+    {%- if site.data.now.updated %}<p class="muted small">updated {{ site.data.now.updated }}</p>{% endif %}
+  </div>
+
+  <div class="card card-news">
+    <h2 class="card-title"><span class="hand">news</span></h2>
+    <ol class="news-list">
+      {%- for n in site.data.news %}
+      <li><span class="news-date">{{ n.date }}</span><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">Selected research</h2>
+    <a class="more hand" href="{{ '/research/' | relative_url }}">all of it →</a>
+  </div>
+  <div class="papers">
+    {%- assign selected = site.data.papers | where: "selected", true -%}
+    {%- for p in selected %}
+      {% include paper.html paper=p %}
+    {%- endfor %}
+  </div>
+</section>
+
+{%- if site.posts.size > 0 %}
+<section class="section">
+  <div class="section-head">
+    <h2 class="section-title">Recent writing</h2>
+    <a class="more hand" href="{{ '/writing/' | relative_url }}">everything →</a>
+  </div>
+  <ul class="post-list">
+    {%- for post in site.posts limit: 3 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-list-title">{{ post.title }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

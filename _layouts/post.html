@@ -1,0 +1,24 @@
+---
+layout: default
+body_class: post
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 220 | at_least: 1 -%}
+<article class="post">
+  <header class="post-head">
+    <a class="back hand" href="{{ '/writing/' | relative_url }}">← all writing</a>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {%- if page.subtitle %}<p class="lede">{{ page.subtitle }}</p>{% endif %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">·</span> {{ minutes }} min read
+      {%- for t in page.tags %} <span class="chip chip-leaf">{{ t }}</span>{% endfor %}
+    </p>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <footer class="post-foot">
+    <p class="hand">thanks for reading! thoughts? <a href="mailto:{{ site.author.email }}">drop me a line</a>.</p>
+  </footer>
+</article>

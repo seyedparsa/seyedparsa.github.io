@@ -1,0 +1,5 @@
+# Photo strip on /beyond. Hidden while empty.
+# Put images in assets/img/beyond/ and list them here:
+# - src: /assets/img/beyond/hike.jpg
+#   caption: somewhere up a mountain
+[]

@@ -1,0 +1,60 @@
+# Papers shown on /research (and on the home page when `selected: true`).
+#
+# Fields
+#   title, authors (list), venue, year   – required
+#   venue_short                          – short badge text, e.g. "NeurIPS 2025"
+#   selected                             – also show on the home page
+#   topics                               – keys from _data/topics.yml (drives the filter chips)
+#   tldr                                 – one or two plain-language sentences, in your voice
+#   links                                – any of: arxiv, pdf, code, slides, poster, video, blog, talk
+#   equal                                – list of authors with equal contribution (marked with *)
+#   bibtex                               – optional; adds a "bibtex" button with copy-to-clipboard
+
+- title: "Let Me Think! A Long Chain-of-Thought Can Be Worth Exponentially Many Short Ones"
+  authors: [Parsa Mirtaheri, Ezra Edelman, Samy Jelassi, Eran Malach, Enric Boix-Adsera]
+  venue: Advances in Neural Information Processing Systems (NeurIPS)
+  venue_short: NeurIPS 2025
+  year: 2025
+  selected: true
+  topics: [reasoning, test-time-compute, theory]
+  tldr: >-
+    Should you spend inference compute on one long chain of thought, or on many short
+    ones and take a majority vote? We construct graph-connectivity reasoning tasks where
+    going long beats going wide by an exponential margin, and back it up with experiments
+    on models trained from scratch and on large reasoning models.
+  links:
+    arxiv: https://arxiv.org/abs/2505.21825
+  bibtex: |
+    @inproceedings{mirtaheri2025letthink,
+      title     = {Let Me Think! A Long Chain-of-Thought Can Be Worth Exponentially Many Short Ones},
+      author    = {Mirtaheri, Parsa and Edelman, Ezra and Jelassi, Samy and Malach, Eran and Boix-Adsera, Enric},
+      booktitle = {Advances in Neural Information Processing Systems},
+      volume    = {38},
+      year      = {2025},
+      eprint    = {2505.21825},
+      archivePrefix = {arXiv}
+    }
+
+- title: "Direct Alignment with Heterogeneous Preferences"
+  authors: [Ali Shirali, Arash Nasr-Esfahany, Abdullah Alomar, Parsa Mirtaheri, Rediet Abebe, Ariel Procaccia]
+  venue: Advances in Neural Information Processing Systems (NeurIPS)
+  venue_short: NeurIPS 2025
+  year: 2025
+  selected: true
+  topics: [alignment, theory]
+  tldr: >-
+    People don't share a single reward function. We model annotators as having latent
+    types, show that the best single policy optimizes the average reward across types,
+    and find a real tension in direct alignment between consistency and sample efficiency.
+  links:
+    arxiv: https://arxiv.org/abs/2502.16320
+  bibtex: |
+    @inproceedings{shirali2025directalignment,
+      title     = {Direct Alignment with Heterogeneous Preferences},
+      author    = {Shirali, Ali and Nasr-Esfahany, Arash and Alomar, Abdullah and Mirtaheri, Parsa and Abebe, Rediet and Procaccia, Ariel},
+      booktitle = {Advances in Neural Information Processing Systems},
+      volume    = {38},
+      year      = {2025},
+      eprint    = {2502.16320},
+      archivePrefix = {arXiv}
+    }

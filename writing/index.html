@@ -1,0 +1,35 @@
+---
+title: Writing
+permalink: /writing/
+kicker: notes, essays & half-baked ideas
+lede: >-
+  Things I've been thinking about, written down so I can think about them better.
+---
+{%- if site.posts.size > 0 -%}
+{%- assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" -%}
+{%- for group in by_year %}
+<section class="year-group">
+  <h2 class="year">{{ group.name }}</h2>
+  <ul class="post-list">
+    {%- for post in group.items %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="post-list-title">{{ post.title }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+      </a>
+      {%- if post.subtitle %}<p class="post-list-sub muted">{{ post.subtitle }}</p>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endfor %}
+<p class="aside"><span class="hand">subscribe:</span> <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></p>
+{%- else %}
+<div class="empty card">
+  <img src="{{ '/assets/img/koala.png' | relative_url }}" alt="" width="72" height="72">
+  <div>
+    <p class="hand empty-title">the first post is still brewing…</p>
+    <p class="muted">Check back soon, or grab the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a> so it finds you.</p>
+  </div>
+</div>
+{%- endif %}

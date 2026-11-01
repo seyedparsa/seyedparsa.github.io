@@ -1,0 +1,6 @@
+<div class="koala" data-lines='{{ site.data.koala | jsonify | escape }}'>
+  <p class="koala-bubble" role="status" aria-live="polite" hidden></p>
+  <button class="koala-btn" type="button" aria-label="Say hi to the koala">
+    <img src="{{ '/assets/img/koala.png' | relative_url }}" alt="" width="56" height="56">
+  </button>
+</div>

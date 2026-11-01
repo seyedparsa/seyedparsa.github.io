@@ -1,0 +1,58 @@
+---
+title: Research
+permalink: /research/
+kicker: what I work on
+lede: >-
+  I'm interested in the science of deep learning: building theory and running careful
+  experiments to understand what neural networks, and language models in particular,
+  learn, how they compute, and where their reasoning comes from.
+---
+{%- comment -%}
+  Papers live in _data/papers.yml, topic chips in _data/topics.yml,
+  and (optional) talks in _data/talks.yml.
+{%- endcomment -%}
+
+{%- assign used_topics = "" | split: "" -%}
+{%- for p in site.data.papers -%}{%- assign used_topics = used_topics | concat: p.topics -%}{%- endfor -%}
+{%- assign used_topics = used_topics | uniq %}
+
+<div class="filter" role="group" aria-label="Filter papers by topic">
+  <span class="hand filter-label">filter:</span>
+  <button class="chip chip-btn" type="button" data-filter="all" aria-pressed="true">everything</button>
+  {%- for t in used_topics -%}
+    {%- assign topic = site.data.topics[t] %}
+  <button class="chip chip-btn chip-{{ topic.color | default: 'sun' }}" type="button" data-filter="{{ t }}" aria-pressed="false">{{ topic.label | default: t }}</button>
+  {%- endfor %}
+</div>
+
+{%- assign by_year = site.data.papers | group_by: "year" | sort: "name" | reverse -%}
+{%- for group in by_year %}
+<section class="year-group">
+  <h2 class="year">{{ group.name }}</h2>
+  <div class="papers">
+    {%- for p in group.items %}
+      {% include paper.html paper=p %}
+    {%- endfor %}
+  </div>
+</section>
+{%- endfor %}
+<p class="filter-empty muted" hidden>Nothing under that topic yet. The koala is looking into it.</p>
+
+{%- if site.data.talks and site.data.talks.size > 0 %}
+<section class="section">
+  <h2 class="section-title">Talks</h2>
+  <ul class="talk-list">
+    {%- for t in site.data.talks %}
+    <li>
+      <span class="news-date">{{ t.date }}</span>
+      <span>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}{% if t.where %} <span class="muted">· {{ t.where }}</span>{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+<p class="aside">
+  <span class="hand">also on</span>
+  <a href="https://scholar.google.com/citations?user=sYrfaykAAAAJ">Google Scholar</a>
+</p>

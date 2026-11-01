@@ -1,0 +1,17 @@
+# Research topics used as filter chips on /research.
+# `color` is one of: sun, clay, leaf, sky, plum
+reasoning:
+  label: reasoning
+  color: sun
+test-time-compute:
+  label: test-time compute
+  color: clay
+theory:
+  label: theory
+  color: leaf
+alignment:
+  label: alignment
+  color: sky
+representations:
+  label: representations
+  color: plum

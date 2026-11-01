@@ -1,0 +1,41 @@
+{%- assign p = include.paper -%}
+<article class="paper" data-topics="{{ p.topics | join: ' ' }}">
+  <div class="paper-meta">
+    <span class="venue">{{ p.venue_short | default: p.year }}</span>
+    {%- for t in p.topics -%}
+      {%- assign topic = site.data.topics[t] %}
+    <span class="chip chip-{{ topic.color | default: 'sun' }}">{{ topic.label | default: t }}</span>
+    {%- endfor %}
+  </div>
+  <h3 class="paper-title">
+    {%- if p.links.arxiv -%}<a href="{{ p.links.arxiv }}">{{ p.title }}</a>
+    {%- elsif p.links.pdf -%}<a href="{{ p.links.pdf }}">{{ p.title }}</a>
+    {%- else -%}{{ p.title }}{%- endif -%}
+  </h3>
+  <p class="authors">
+    {%- for a in p.authors -%}
+      {%- if a == site.me_in_author_lists -%}<strong class="me">{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+      {%- if p.equal contains a -%}<sup>*</sup>{%- endif -%}
+      {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+  </p>
+  {%- if p.tldr and include.tldr != false %}
+  <p class="tldr"><span class="hand">tl;dr</span> {{ p.tldr | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+  {%- endif %}
+  {%- if p.links or p.bibtex %}
+  <p class="paper-links">
+    {%- for l in p.links %}
+    <a class="pill" href="{{ l[1] | relative_url }}">{{ l[0] }}</a>
+    {%- endfor %}
+    {%- if p.bibtex %}
+    <button class="pill" type="button" data-bib-toggle aria-expanded="false">bibtex</button>
+    {%- endif %}
+  </p>
+  {%- endif %}
+  {%- if p.bibtex %}
+  <div class="bibtex" hidden>
+    <pre><code>{{ p.bibtex | strip | escape }}</code></pre>
+    <button class="pill copy" type="button" data-copy>copy</button>
+  </div>
+  {%- endif %}
+</article>

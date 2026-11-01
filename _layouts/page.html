@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<header class="page-head">
+  {%- if page.kicker %}<p class="kicker hand">{{ page.kicker }}</p>{% endif %}
+  <h1 class="page-title">{{ page.title }}</h1>
+  {%- if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+</header>
+{{ content }}

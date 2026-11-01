@@ -1,0 +1,7 @@
+# Short updates shown on the home page, newest first.
+# `date` is free text ("Dec 2025", "2025", …). `text` may contain Markdown links.
+- date: "2025"
+  text: >-
+    Two papers at **NeurIPS 2025**: [Let Me Think!](https://arxiv.org/abs/2505.21825) and
+    [Direct Alignment with Heterogeneous Preferences](https://arxiv.org/abs/2502.16320).
+# TODO(parsa): add more news items (talks, internships, visits, awards, …)
